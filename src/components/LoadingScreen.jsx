@@ -73,7 +73,8 @@ const LoadingScreen = ({ onComplete }) => {
                 ref={videoRef}
                 className={`splash-video ${isVisible ? 'visible' : ''}`}
                 playsInline
-                muted // Mandatory for mobile autoplay
+                autoPlay
+                muted
                 src={splashVideo}
                 onLoadedMetadata={handleMetadata}
                 onCanPlay={handleCanPlay}

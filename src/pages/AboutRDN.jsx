@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import PageHeader from '../components/layout/PageHeader';
 import './AboutRDN.css';
+import emilyFamilyImg from '../assets/emily_family.jpg';
 
 const AboutRDN = () => {
     const navigate = useNavigate();
@@ -12,10 +13,10 @@ const AboutRDN = () => {
             <div className="rdn-profile-card stagger-1">
                 <div className="rdn-hero">
                     <img
-                        src="/src/assets/emily.jpg"
+                        src={emilyFamilyImg}
                         alt="Emily Torres-Medaglia RDN"
                         className="rdn-image"
-                        style={{ objectPosition: 'center 20%' }}
+                        style={{ objectPosition: 'center 26%' }}
                     />
                     <div className="rdn-badge">Bilingual RDN</div>
                 </div>

@@ -33,9 +33,20 @@ const SmartLogSheet = ({ isOpen, onClose, mealType }) => {
                 </div>
 
                 <div className="camera-section">
-                    <button className="snap-btn">
+                    <label htmlFor="food-upload" className="snap-btn" style={{ display: 'inline-block', textAlign: 'center', cursor: 'pointer', width: '100%' }}>
                         📷 Snap & Track
-                    </button>
+                    </label>
+                    <input
+                        id="food-upload"
+                        type="file"
+                        accept="image/*"
+                        style={{ display: 'none' }}
+                        onChange={(e) => {
+                            if (e.target.files[0]) {
+                                alert("Great photo! We've added this to your food diary.");
+                            }
+                        }}
+                    />
                 </div>
             </div>
         </div>

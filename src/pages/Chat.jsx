@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../components/chat/Chat.css';
+import logoImg from '../assets/logo.jpg';
 
 // The "Brain" of Guttie AI
 const identifyIntent = (text) => {
@@ -49,7 +50,7 @@ const Chat = () => {
         <div className="chat-page-container">
             <div className="chat-header-fixed">
                 <div className="bot-avatar">
-                    <img src="/src/assets/logo.jpg" alt="AI" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                    <img src={logoImg} alt="AI" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
                 <div>
                     <h2>Guttie Assistant</h2>

@@ -1,3 +1,12 @@
+import gutBrainImg from '../assets/gut_brain.jpg';
+import fiberImg from '../assets/fiber_comparison.jpg';
+import fermentedImg from '../assets/fermented_workshop.jpg';
+
+import moduleBg1 from '../assets/module_bg_1.jpg';
+import moduleBg2 from '../assets/module_bg_2.jpg';
+import moduleBg3 from '../assets/module_bg_3.jpg';
+import moduleBg4 from '../assets/module_bg_4.jpg';
+
 export const courses = [
     {
         id: 'microbiome-101',
@@ -5,10 +14,9 @@ export const courses = [
         instructor: "Emily Torres-Medaglia RDN",
         duration: "45 min",
         level: "Beginner",
-        thumbnail: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop", // Keeping existing if valid, or replacing:
-        // Replacing with a known science/microscope one to be safe:
-        thumbnail: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop",
-        videoUrl: "https://www.youtube.com/watch?v=VzPD009qTN4", // Updated video
+        thumbnail: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop",
+        videoPoster: moduleBg1,
+        videoUrl: "https://www.youtube.com/watch?v=VzPD009qTN4",
         summary: "Discover the trillions of bacteria living inside you and why they dictate your health.",
         content: `
             <h3>Introduction</h3>
@@ -35,8 +43,9 @@ export const courses = [
         instructor: "Dr. A. Miller",
         duration: "30 min",
         level: "Intermediate",
-        thumbnail: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=800&auto=format&fit=crop", // Abstract cells/medical
-        videoUrl: "https://www.youtube.com/watch?v=21MDAnY7DX8&t=10s", // Updated Leaky Gut video
+        thumbnail: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=800&auto=format&fit=crop",
+        videoPoster: moduleBg2,
+        videoUrl: "https://www.youtube.com/watch?v=21MDAnY7DX8&t=10s",
         summary: "Understanding 'Intestinal Permeability'—what it actually is and how to heal it.",
         content: `
             <h3>What is "Leaky Gut"?</h3>
@@ -56,8 +65,9 @@ export const courses = [
         instructor: "Emily Torres-Medaglia RDN",
         duration: "50 min",
         level: "Intermediate",
-        thumbnail: "/src/assets/gut_brain.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=5h3Y4iNcN8g", // Updated Gut-Brain video
+        thumbnail: gutBrainImg,
+        videoPoster: moduleBg3,
+        videoUrl: "https://www.youtube.com/watch?v=5h3Y4iNcN8g",
         summary: "Why your gut is called the 'Second Brain' and how it influences anxiety and depression.",
         content: `
             <h3>The Vagus Nerve</h3>
@@ -77,8 +87,9 @@ export const courses = [
         instructor: "Emily Torres-Medaglia RDN",
         duration: "60 min",
         level: "Advanced",
-        thumbnail: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop", // Healthy food flatlay
-        videoUrl: "https://youtu.be/KzEOG2L9Md4", // Updated FODMAPs video
+        thumbnail: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop",
+        videoPoster: moduleBg4,
+        videoUrl: "https://youtu.be/KzEOG2L9Md4",
         summary: "A roadmap to the Low-FODMAP diet for managing Irritable Bowel Syndrome.",
         content: `
             <h3>What are FODMAPs?</h3>
@@ -98,8 +109,9 @@ export const courses = [
         instructor: "Sarah Jones, RD",
         duration: "35 min",
         level: "Beginner",
-        thumbnail: "https://images.unsplash.com/photo-1563865436874-9aef32095fad?q=80&w=800&auto=format&fit=crop", // Yogurt/Healthy
-        videoUrl: "https://www.youtube.com/embed/O3E8e1oP9V4", // Probiotics vs Prebiotics (Educational)
+        thumbnail: "https://images.unsplash.com/photo-1563865436874-9aef32095fad?q=80&w=800&auto=format&fit=crop",
+        videoPoster: moduleBg1,
+        videoUrl: "https://www.youtube.com/embed/O3E8e1oP9V4",
         summary: "Don't waste money on supplements until you understand the difference.",
         content: `
             <h3>Probiotics</h3>
@@ -119,8 +131,9 @@ export const courses = [
         instructor: "Emily Torres-Medaglia RDN",
         duration: "40 min",
         level: "Beginner",
-        thumbnail: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=800&auto=format&fit=crop", // Salmon/Fish/Veg
-        videoUrl: "https://www.youtube.com/embed/eI7wW4lDw3U", // Anti-Inflammatory Diet 101
+        thumbnail: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=800&auto=format&fit=crop",
+        videoPoster: moduleBg2,
+        videoUrl: "https://www.youtube.com/embed/eI7wW4lDw3U",
         summary: "Reduce systemic inflammation with the power of Omega-3s and antioxidants.",
         content: `
             <h3>The Mediterranean Model</h3>
@@ -140,8 +153,9 @@ export const courses = [
         instructor: "Dr. Will B.",
         duration: "55 min",
         level: "Intermediate",
-        thumbnail: "/src/assets/fiber_comparison.jpg",
-        videoUrl: "https://www.youtube.com/embed/pZzXwLw5l4Q", // Soluble vs Insoluble Fiber (Interactive)
+        thumbnail: fiberImg,
+        videoPoster: moduleBg3,
+        videoUrl: "https://www.youtube.com/embed/pZzXwLw5l4Q",
         summary: "Fiber is the single most important nutrient for gut health. Are you getting enough?",
         content: `
             <h3>Soluble Fiber</h3>
@@ -161,8 +175,9 @@ export const courses = [
         instructor: "Sarah Jones, RD",
         duration: "20 min",
         level: "Beginner",
-        thumbnail: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop", // Water splash
-        videoUrl: "https://www.youtube.com/embed/sS_H6_I0gkE", // SciShow: Ways intestines affect you (Close match)
+        thumbnail: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop",
+        videoPoster: moduleBg4,
+        videoUrl: "https://www.youtube.com/embed/sS_H6_I0gkE",
         summary: "Why water is the unsung hero of motility and absorption.",
         content: `
             <h3>Motility</h3>
@@ -182,8 +197,9 @@ export const courses = [
         instructor: "Dr. Walker",
         duration: "45 min",
         level: "Intermediate",
-        thumbnail: "https://images.unsplash.com/photo-1511295742362-92c96b1cf484?q=80&w=800&auto=format&fit=crop", // Sleep concept
-        videoUrl: "https://www.youtube.com/embed/gedoSfZvBgE", // TED-Ed: Benefits of Sleep (General but reliable)
+        thumbnail: "https://images.unsplash.com/photo-1511295742362-92c96b1cf484?q=80&w=800&auto=format&fit=crop",
+        videoPoster: moduleBg1,
+        videoUrl: "https://www.youtube.com/embed/gedoSfZvBgE",
         summary: "Your gut bacteria have a circadian rhythm too. Learn how to sync them.",
         content: `
             <h3>Circadian Rhythms</h3>
@@ -203,8 +219,9 @@ export const courses = [
         instructor: "Emily Torres-Medaglia RDN",
         duration: "90 min",
         level: "Advanced",
-        thumbnail: "/src/assets/fermented_workshop.jpg",
-        videoUrl: "https://www.youtube.com/embed/EEjcCKgX5M4", // 'How to Ferment Foods' - Valid ID
+        thumbnail: fermentedImg,
+        videoPoster: moduleBg2,
+        videoUrl: "https://www.youtube.com/embed/EEjcCKgX5M4",
         summary: "A practical guide to making your own sauerkraut, kimchi, and kefir at home.",
         content: `
             <h3>Lacto-Fermentation</h3>

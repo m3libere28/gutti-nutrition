@@ -12,7 +12,7 @@ const OnboardingWizard = ({ onComplete }) => {
         <div className="splash-container">
             <div className="phone-frame glass-panel" style={{ justifyContent: 'space-between' }}>
                 <div style={{ padding: '20px 0', textAlign: 'center' }}>
-                    <img src="/logo_transparent.png" alt="Gutti Nutrition" className="onboarding-logo" />
+                    <img src="/logo_transparent.png" alt="Guttie Nutrition" className="onboarding-logo" />
 
                     {/* Progress Dots */}
                     <div className="step-dots">

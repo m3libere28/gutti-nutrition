@@ -49,6 +49,8 @@ const CourseDetail = () => {
                     <video
                         src={completionVideo}
                         autoPlay
+                        playsInline
+                        muted
                         className="completion-video"
                         onEnded={() => navigate('/classes')}
                     />
@@ -57,7 +59,7 @@ const CourseDetail = () => {
             )}
 
             <div className="course-video-container">
-                <img src={course.thumbnail} alt={course.title} className="course-thumbnail" />
+                <img src={course.videoPoster || course.thumbnail} alt={course.title} className="course-thumbnail" />
                 <a
                     href={getWatchUrl(course.videoUrl)}
                     target="_blank"

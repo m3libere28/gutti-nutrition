@@ -175,6 +175,12 @@
     font-size: 0.8rem;
 }
 
+.self-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Controls */
 .call-controls {
     position: absolute;

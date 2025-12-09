@@ -8,13 +8,33 @@ import './Profile.css';
 const Profile = () => {
     const navigate = useNavigate();
     const [user, setUser] = useState({ name: 'Guest', goal: 'Wellness', email: '' });
+    const [avatar, setAvatar] = useState(null);
 
     useEffect(() => {
         const stored = localStorage.getItem('gutti_user_profile');
         if (stored) {
             setUser(JSON.parse(stored));
         }
+
+        // Load custom avatar if exists
+        const storedAvatar = localStorage.getItem('gutti_user_avatar');
+        if (storedAvatar) {
+            setAvatar(storedAvatar);
+        }
     }, []);
+
+    const handleAvatarChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const base64String = reader.result;
+                setAvatar(base64String);
+                localStorage.setItem('gutti_user_avatar', base64String);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
 
     const handleLogout = () => {
         // Clear onboarding to show wizard again? Or just clear user?
@@ -22,14 +42,31 @@ const Profile = () => {
         navigate('/signup');
     };
 
+    const currentAvatar = avatar || `https://api.dicebear.com/9.x/avataaars/svg?seed=${user.name}`;
+
     return (
         <div className="dashboard-container">
             {/* Header */}
             <h2 style={{ marginBottom: 20, fontSize: '1.8rem', color: 'var(--color-primary-dark)' }}>My Profile</h2>
 
             <div className="profile-header">
-                <div className="profile-avatar-xl">
-                    <img src={`https://api.dicebear.com/9.x/avataaars/svg?seed=${user.name}`} alt="Profile" />
+                <div className="profile-avatar-xl" style={{ position: 'relative', cursor: 'pointer' }}>
+                    <label htmlFor="avatar-upload" style={{ cursor: 'pointer', display: 'block', height: '100%' }}>
+                        <img src={currentAvatar} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <div className="edit-overlay" style={{
+                            position: 'absolute', bottom: 0, right: 0, background: 'white',
+                            borderRadius: '50%', padding: 5, boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
+                        }}>
+                            📷
+                        </div>
+                    </label>
+                    <input
+                        id="avatar-upload"
+                        type="file"
+                        accept="image/*"
+                        style={{ display: 'none' }}
+                        onChange={handleAvatarChange}
+                    />
                 </div>
                 <div className="profile-details">
                     <h3>{user.name}</h3>

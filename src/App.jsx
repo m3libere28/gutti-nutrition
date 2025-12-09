@@ -44,7 +44,7 @@ function App() {
   // Main App with Tab Layout
   return (
     <div className="app-container">
-      <Router>
+      <Router basename="/gutti-nutrition">
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Dashboard />} />

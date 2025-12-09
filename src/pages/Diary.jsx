@@ -4,6 +4,7 @@ import SymptomLog from '../components/diary/SymptomLog';
 import SmartLogSheet from '../components/diary/SmartLogSheet';
 import './Dashboard.css'; // Reusing layout
 import './Diary.css';
+import NeedsCalculator from '../components/widgets/NeedsCalculator';
 
 const Diary = () => {
     const [isLogOpen, setIsLogOpen] = useState(false);
@@ -14,8 +15,12 @@ const Diary = () => {
         setIsLogOpen(true);
     };
 
+
+
     return (
         <div className="dashboard-container">
+
+
             {/* Header/Date Nav */}
             <div className="date-nav">
                 <button className="nav-arrow">‹</button>
@@ -27,17 +32,9 @@ const Diary = () => {
             </div>
 
             {/* Daily Summary */}
-            <div className="summary-card glass-panel">
-                <div className="macro-ring">
-                    <span className="cals-rem">1,250</span>
-                    <span className="cals-label">kcal left</span>
-                </div>
-                <div className="macros-row">
-                    <div className="macro-item"><span className="dot pro"></span>120g P</div>
-                    <div className="macro-item"><span className="dot carb"></span>150g C</div>
-                    <div className="macro-item"><span className="dot fat"></span>60g F</div>
-                </div>
-            </div>
+            <NeedsCalculator />
+
+            {/* Meal Slots */}
 
             {/* Meal Slots */}
             <h3 className="section-title">Meals</h3>
